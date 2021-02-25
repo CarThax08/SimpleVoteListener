@@ -1,0 +1,6 @@
+name: Main
+version: ${project.version}
+main: com.github.carthax08.simplevoterewards.Simplevoterewards
+softdepend: [ Votifier ]
+authors: [ CarThax08 ]
+description: A simple plugin for allowing you to reward players for voting.
