@@ -4,3 +4,8 @@ main: com.github.carthax08.simplevoterewards.Simplevoterewards
 softdepend: [ Votifier ]
 authors: [ CarThax08 ]
 description: A simple plugin for allowing you to reward players for voting.
+commands:
+  simplevoterewards:
+    description: Main command for SimpleVoteRewards
+    usage: svr <test,reload>
+    aliases: [svr]

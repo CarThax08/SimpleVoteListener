@@ -8,7 +8,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
 public class VoteListener implements Listener {
-    Simplevoterewards main;
+    static Simplevoterewards main;
 
     public VoteListener(Simplevoterewards ree){
         main = ree;
@@ -19,6 +19,11 @@ public class VoteListener implements Listener {
         Vote vote = e.getVote();
         for(String string : main.getConfig().getStringList("rewards.commands")){
             Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), string.replace("[PLAYER]", vote.getUsername()));
+        }
+    }
+    public static void handleTest(String username){
+        for(String string : main.getConfig().getStringList("rewards.commands")){
+            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), string.replace("[PLAYER]", username));
         }
     }
 }
